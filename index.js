@@ -96,17 +96,22 @@ console.log(grfind(92));     //output:A
 console.log(grfind(50));     //output:pass
 
 //Check Vowels
-let arr=['a','e','i','o','u'];
-function vow(str)
-{
-  return 
+function isVowel(str) {  
+  return /[aeiouAEIOU]/.test(str); 
 }
+console.log(isVowel("India"));   //output:true
+console.log(isVowel("Dry"));     //output:false
 
 //Find Prime Number
-function isprime(no)
-{
- 
+function isprime(num) {              
+  var i,flag='true';
+  for(i = 2; i < num ; i++) 
+    if (num % i == 0) { 
+        flag = 'false'; 
+        break; 
+    } 
+    return flag;
 }
-console.log(isprime(11));
-console.log(isprime(18)); 
+console.log(isprime(11));   //output:true
+console.log(isprime(18));   //output:false
 
